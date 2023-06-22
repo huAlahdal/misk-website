@@ -1,0 +1,224 @@
+.canvasjs-chart-credit {
+    display: none;
+}
+canvas {    
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.chart-container {
+    width: 500px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+}
+/* .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+.highcharts-button-symbol, .highcharts-credits {
+    display: none;
+}
+.bg {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    background-image: url('img/a.bmp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40%;
+    width: 50%;
+
+    /* height: 30%;
+    width: 30%; */
+}
+.bgb {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    background-image: url('img/b.bmp');
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 40%;
+    width: 50%;
+
+    /* height: 30%;
+    width: 30%; */
+}
+
+.bgOverAll {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: -1;
+    background-image: url('img/c.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    height: 49%;
+    width: 39%;
+    /* font-size: 55px;
+    height: 47%;
+    width: 37%;
+    color: #257968; */
+}
+
+
+
+.lds-hourglass {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /* position: relative; */
+    width: 80px;
+    height: 80px;
+}
+.lds-hourglass:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid #257968;
+    border-color: #257968 transparent #257968 transparent;
+    animation: lds-hourglass 1.2s infinite;
+}
+@keyframes lds-hourglass {
+0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+100% {
+    transform: rotate(1800deg);
+}
+}
+
+#loading {
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    /* background:rgba(255, 255, 255, 0.685); */
+    background:#ffffff;
+    z-index: 200;
+}
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.card-head-custom {
+    height: 138px;
+}
+
+.card {
+    margin: 10px;
+}
+
+.double-nav .breadcrumb-dn {
+    color: #fff;
+  }
+  .button-collapse i {
+    color: #fff
+  }
+
+
+  /* .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  } */
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  
+  .selects {
+      width: 99% !important;
+  }
+
+  .selected .active {
+      color: #ffffff !important;
+  }
+
+  .btn {
+    background-color: #3A4249 !important;
+  }
+
+  .card-header-success .card-icon {
+    background: linear-gradient(60deg, #257968, #2e8d7a) !important;
+  }
+
+  .card-header-warning .card-icon {
+    background: linear-gradient(60deg, #F4B02F, rgb(255, 188, 63)) !important;
+  }
+
+  .card-header-info .card-icon {
+    background: linear-gradient(60deg, #26A8DF, rgb(48, 184, 243)) !important;
+  }
+
+  .card-chart .card-header {
+    background: linear-gradient(60deg, #257968, #2e8d7a) !important;
+  }

@@ -1,0 +1,395 @@
+* {
+  font-family: 'Myriad Pro Semibold';
+}
+
+.sidebar {
+  overflow: hidden !important;
+}
+
+.sidebar-wrapper {
+  overflow: visible !important;
+}
+
+.canvasjs-chart-credit {
+  display: none;
+}
+
+canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.chart-container {
+  width: 500px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.highcharts-button-symbol, .highcharts-credits {
+  display: none;
+}
+
+.bg {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+  background-image: url('../img/a.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40%;
+  width: 50%;
+}
+
+.bgb {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+  background-image: url('../img/user.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 40%;
+  width: 50%;
+}
+
+.bgOverAll {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: -1;
+  background-image: url('../img/c.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 49%;
+  width: 39%;
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #257968;
+  border-color: #257968 transparent #257968 transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+#loading {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 6000;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-head-custom {
+  height: 138px;
+}
+
+.card {
+  margin: 0px;
+}
+
+.double-nav .breadcrumb-dn {
+  color: #fff;
+}
+
+.button-collapse i {
+  color: #fff
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.selects {
+  width: 99% !important;
+}
+
+.selected .active {
+  color: #ffffff !important;
+}
+
+.btn {
+  background-color: #3A4249 !important;
+}
+
+.card-header-success .card-icon {
+  background: linear-gradient(60deg, #257968, #2e8d7a) !important;
+}
+
+.card-header-warning .card-icon {
+  background: linear-gradient(60deg, #F4B02F, rgb(255, 188, 63)) !important;
+}
+
+.card-header-info .card-icon {
+  background: linear-gradient(60deg, #26A8DF, rgb(48, 184, 243)) !important;
+}
+
+.card-chart .card-header {
+  background: linear-gradient(60deg, #257968, #2e8d7a) !important;
+}
+
+.ct-chart .ct-label.ct-horizontal {
+  line-height: 1 !important;
+  align-items: center !important;
+  display: block !important;
+}
+
+.ct-chart .ct-label.ct-vertical {
+  line-height: 0 !important;
+}
+
+#chartAllIndexes .ct-bar {
+  stroke-width: 60px;
+}
+
+#IndexName {
+  font-weight: 600;
+  color: #257968;
+}
+
+.nav-pills .nav-link {
+  color: #4d4d4d;
+}
+
+.nav-pills .nav-link:hover {
+  color: #257968;
+}
+
+.nav-pills .nav-link.active {
+  color: #ffffff;
+  background-color: #257968 !important;
+}
+
+a.dropdown-menu li a {
+  margin: 5px !important;
+  width: 89% !important;
+}
+
+.dropdown-menu.show {
+  width: 90% !important;
+  min-width: 60% !important;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #0C9;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1221;
+}
+
+.float2 {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 110px;
+  right: 40px;
+  background-color: #0C9;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1221;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
+#mySidenav a {
+  position: fixed;
+  backface-visibility: hidden;
+  right: -20px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 180px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  background-color: #3A4249;
+  z-index: 1221;
+  cursor: pointer;
+}
+
+#Domains {
+  position: fixed;
+  backface-visibility: hidden;
+  right: 40px;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: 500;
+  color: #3A4249;
+  z-index: 1221;
+  bottom: 340px;
+}
+
+#Domains.minimize {
+  right: -140px;
+}
+
+#Domains.minimize.mobile {
+  right: 0;
+}
+
+#Domains.minimize.mobile.english {
+  right: -13px !important;
+}
+
+#Domains.minimize.mobile {
+  right: 0;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  transform: rotate(-90deg);
+}
+
+#mySidenav a.minimize {
+  right: -140px;
+}
+
+#mySidenav a.preactive:hover {
+  right: 0 !important;
+}
+
+@media(hover: hover) and (pointer: fine) {
+  #mySidenav a:hover {
+    right: 0 !important;
+  }
+}
+
+#mySidenav a.active {
+  right: 0;
+}
+
+#mySidenav a.active.mobile {
+  right: -140px;
+}
+
+#mySidenav a.active {
+  background-color: #257968;
+}
+
+#b5 {
+  bottom: 20px;
+}
+
+#b4 {
+  bottom: 80px;
+}
+
+#b3 {
+  bottom: 140px;
+}
+
+#b2 {
+  bottom: 200px;
+}
+
+#b1 {
+  bottom: 260px;
+}
+
+.sidenavButton {
+  font-size: small;
+}
+
+.sidenavButton span {
+  font-weight: 300;
+  font-size: small;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-eng {
+    font-size: 80% !important;
+  }
+}

@@ -1,0 +1,60 @@
+body {
+    direction: rtl;
+}
+
+.filter-option {
+    text-align: right !important;
+}
+
+.card-title {
+    text-align: right;
+}
+
+.footer {
+    display: block !important;
+}
+
+.nav {
+    padding: 0;
+}
+
+.modal-headerAR {
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+}
+
+.ARAlign {
+    text-align: right;
+}
+
+.navbar-wrapper {
+    margin-top: 15px !important;
+}
+
+.navbar-brand {
+    font-size: 150% !important;
+}
+
+.container-fluidAR {
+    text-align: right;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 500px) {
+    .nav-AR {
+        font-size: 130% !important;
+    }
+}
+
+@media only screen and (max-width: 325px) {
+    .nav-AR {
+        font-size: 100% !important;
+    }
+}

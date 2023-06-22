@@ -1,0 +1,12 @@
+import '../assets/js/core/jquery.min.js';
+import '../assets/js/core/popper.min.js';
+import '../assets/js/core/bootstrap-material-design.min.js';
+import '../assets/js/plugins/perfect-scrollbar.jquery.min.js';
+import '../assets/js/chart.js';
+import '../assets/js/plugins/jquery.bootstrap-wizard.js';
+import '../assets/js/plugins/bootstrap-selectpicker.js';
+import '../assets/js/plugins/nouislider.min.js';
+import 'https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js';
+import '../assets/js/plugins/arrive.min.js';
+import '../assets/js/plugins/chartist.min.js';
+import '../assets/js/material-dashboard2.js?v=9';

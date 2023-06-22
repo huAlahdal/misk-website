@@ -1,0 +1,823 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../../assets/css/style-AR.css" rel="stylesheet" />
+  <link href="../../assets/font/Myriad Pro/MyriadPro-Semibold.otf" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    YOUTH READINESS SURVEY DASHBOARD
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link href="../../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="../../assets/css/style.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div id="loading">
+    <div class="lds-hourglass"></div>
+  </div>
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../../assets/img/sidebar-1.jpg">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+      <div class="logo">
+        <a class="simple-text logo-normal">
+          <!-- Misk  -->
+          <img src="../../assets/img/logo.png" alt="Misk" style="width: 30%;">
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="text-center text-dark" style="color: rgb(49, 49, 49) !important; font-weight: 700 !important;">
+            <!-- <a class="nav-link"> -->
+            <!-- <i class="material-icons">filter_list</i> -->
+            <p>Filters</p>
+            <!-- </a> -->
+          </li>
+          <li class="nav-item active  ">
+            <select id="genderSelect" class="selects nav-link selectpicker">
+              <option value="0">Gender</option>
+              <option value="1">Female</option>
+              <option value="2">Male</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="citySelect" class="nav-link selectpicker selects">
+              <option value="0" selected>Province</option>
+              <option value="1">Riyadh</option>
+              <option value="2">Qassim</option>
+              <option value="3">Northern Borders</option>
+              <option value="4">Tabuk</option>
+              <option value="5">Jawf</option>
+              <option value="6">Ha'il</option>
+              <option value="7">Najran</option>
+              <option value="8">Asir</option>
+              <option value="9">Bahah</option>
+              <option value="10">Jizan</option>
+              <option value="11">Ash Sharqiyah</option>
+              <option value="12">Makkah</option>
+              <option value="13">Madinah</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="ageSelect" class="nav-link selectpicker selects">
+              <option value="0">Age</option>
+              <option value="1">15-19</option>
+              <option value="2">20-24</option>
+              <option value="3">25-29</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="eduSelect" class="nav-link selectpicker selects">
+              <option value="0">Education Level</option>
+              <option value="1">Primary and below</option>
+              <option value="2">Middle</option>
+              <option value="3">Secondary</option>
+              <option value="4">Intermediate Diploma</option>
+              <option value="5">Bachelors</option>
+              <option value="6">Higher Diploma</option>
+              <option value="7">Masters</option>
+              <option value="8">Doctorate</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="maritalSelect" class="nav-link selectpicker selects">
+              <option value="0">Marital status</option>
+              <option value="1">single</option>
+              <option value="2">married</option>
+              <option value="3">separated</option>
+              <option value="4">divorced</option>
+              <option value="5">widowed</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="navbar-wrapper">
+            <a class="navbar-brand">YOUTH READINESS SURVEY DASHBOARD</a>
+          </div>
+
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row justify-content-center mb-4">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">person</i>
+                  </div>
+                  <p class="card-category p-2">Samples</p>
+                  <h3 class="card-title p-2">1300
+                    <!-- <small>GB</small> -->
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">supervisor_account</i>
+                  </div>
+                  <p class="card-category p-2">Ages</p>
+                  <h3 class="card-title p-2">15 - 34</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mt-lg-0 mt-2">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">thumb_up</i>
+                  </div>
+                  <p class="card-category p-2">Readiness</p>
+                  <h3 class="card-title p-2">69</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="col-lg-3 col-md-12 col-12 mb-4">
+              <div class="card card-stats p-3 h-100" style="z-index: -1;">
+                <div class="row h-100 align-items-center justify-content-center ">
+                  <div class="col-lg-10 col-sm-4 col-8 my-2">
+                    <canvas id="overAll"></canvas>
+                    <!-- <i class="material-icons bgOverAll">thumb_up</i> -->
+                    <div class="bgOverAll"></div>
+                  </div>
+
+                  <div class="col-lg-10 col-sm-4 col-6 my-2">
+                    <canvas id="gendar"></canvas>
+                    <div class="bg"></div>
+                  </div>
+                  <div class="col-lg-10 col-sm-4 col-6 my-2">
+                    <canvas id="gendar2"></canvas>
+                    <div class="bgb"></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-12 col-12 mb-4 pr-lg-4">
+              <div class="card card-stats h-100 p-3">
+                <div class="row align-items-center justify-content-center h-100 px-sm-5">
+                  <div class="col-12 h-100 px-sm-5">
+                    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+                    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/mapdata/countries/sa/sa-all.js"></script>
+                    <style>
+                      /* #container {
+                        height: 100%;
+                        margin: 0 auto;
+                      }
+
+                      .loading {
+                        margin-top: 10em;
+                        text-align: center;
+                        color: gray;
+                      } */
+
+                      #chart1 .ct-series-a :last-child,
+                      #chart2 .ct-series-a :last-child,
+                      #chart3 .ct-series-a :last-child,
+                      #chart4 .ct-series-a :last-child,
+                      #chart5 .ct-series-a :last-child,
+                      #chart6 .ct-series-a :last-child,
+                      #chart7 .ct-series-a :last-child,
+                      #chart8 .ct-series-a :last-child,
+                      #chart9 .ct-series-a :last-child,
+                      #chart10 .ct-series-a :last-child,
+                      #chartY1 .ct-series-a :last-child,
+                      #chartY2 .ct-series-a :last-child,
+                      #chartY3 .ct-series-a :last-child,
+                      #chartY4 .ct-series-a :last-child,
+                      #chartY5 .ct-series-a :last-child {
+                        stroke: #F4B02F;
+                      }
+                    </style>
+
+
+                    <div id="container" class="px-sm-5" style="width:100%; height:100%; min-height: 400px;"></div>
+
+                    <script>
+                      var data = [
+                        {
+                          key: 'sa-4293',
+                          id: 0,
+                          value: 0,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-ri',
+                          id: 1,
+                          value: 4,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-qs',
+                          id: 2,
+                          value: 7,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-hs',
+                          id: 3,
+                          value: 8,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-tb',
+                          id: 4,
+                          value: 1,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-jf',
+                          id: 5,
+                          value: 9,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-ha',
+                          id: 6,
+                          value: 6,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-nj',
+                          id: 7,
+                          value: 3,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-as',
+                          id: 8,
+                          value: 8,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-ba',
+                          id: 9,
+                          value: 11,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-jz',
+                          id: 10,
+                          value: 2,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-sh',
+                          id: 11,
+                          value: 10,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-mk',
+                          id: 12,
+                          value: 20,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                        {
+                          key: 'sa-md',
+                          id: 13,
+                          value: 5,
+                          text: 'Male: 10% <br>Female: 5%'
+                        },
+                      ];
+
+                      // highcharts-key-sa-tb
+
+                      // Create the chart
+                      var map123 = Highcharts.mapChart('container', {
+                        chart: {
+                          map: 'countries/sa/sa-all',
+                          // width: 400,
+                          // height: 500
+                        },
+
+                        title: {
+                          enabled: false,
+                          text: ''
+                        },
+
+                        //title: {
+                        //text: 'Map of Readiness'
+                        //},
+
+
+                        // subtitle: {
+                        //     enabled: false,
+                        //     text: 'Source map: <a href="http://code.highcharts.com/mapdata/countries/sa/sa-all.js">Saudi Arabia</a>'
+                        // },
+
+                        mapNavigation: {
+                          enabled: false,
+                          // buttonOptions: {
+                          //     verticalAlign: 'bottom'
+                          // }
+                        },
+
+                        colorAxis: {
+                          minColor: '#FFFFFF',
+                          maxColor: '#257968',
+                          min: 0,
+                          max: 100
+                        },
+
+                        legend: {
+                          layout: 'horizontal',
+                          borderWidth: 0,
+                          backgroundColor: 'rgba(255,255,255,0.85)',
+                          // floating: true,
+                          verticalAlign: 'top',
+                          y: 25
+                        },
+                        // legend: {
+                        //   layout: 'vertical',
+                        //   borderWidth: 0,
+                        //   backgroundColor: 'rgba(255,255,255,0.85)',
+                        //   // floating: true,
+                        //   align: 'left',
+                        //   verticalAlign: 'middle',
+                        //   y: 25
+                        // },
+
+                        series: [{
+                          data: data,
+                          joinBy: ['hc-key', 'key'],
+                          name: 'Readiness',
+                          states: {
+                            hover: {
+                              color: '#BADA55'
+                            }
+                          },
+                          dataLabels: {
+                            enabled: true,
+                            format: '{point.name}'
+                          },
+                          tooltip: {
+                            // pointFormat: 'Over all: {point.value}% <br>{point.text}'
+                            pointFormat: '{point.value}'
+                          }
+
+                        }],
+                        plotOptions: {
+                          series: {
+                            point: {
+                              events: {
+                                click: function () {
+                                  var cityId = this.id.toString();
+                                  // console.log(cityId);
+                                  // document.getElementById("citySelect").selectedIndex = this.id;
+                                  // console.log($('#citySelect').val());
+
+                                  $('#citySelect').val(cityId);
+                                  $('.selectpicker').selectpicker('refresh');
+                                  // console.log($('#citySelect').val());
+                                  selectsValue();
+
+                                  // var text = '<b>Clicked point</b><br>Series: ' + this.series.name +
+                                  //         '<br>Point: ' + this.name + ' (' + this.value + '/km²)',
+                                  //     chart = this.series.chart;
+                                  // if (!chart.clickLabel) {
+                                  //     chart.clickLabel = chart.renderer.label(text, 0, 250)
+                                  //         .css({
+                                  //             width: '180px'
+                                  //         })
+                                  //         .add();
+                                  // } else {
+                                  //     chart.clickLabel.attr({
+                                  //         text: text
+                                  //     });
+                                  // }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      });
+
+                    </script>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row my-3">
+            <div class="col-12 mb-4 text-center">
+              <hr>
+              5: Strongly agree, &nbsp; 1: Strongly disagree, &nbsp; <span style="color: #F4B02F">0: Prefer not to
+                answer</span>
+            </div>
+            <div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning chart-color">
+                    <div class="ct-chart" id="chart1"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">My education has given me the knowledge and skills I need to get the job I
+                      want
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart2"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">My education has contributed enough to my preparation for my current job
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart3"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">My social relationships are supportive, often without differences</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart4"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I actively contribute to the happiness and extensibility of others</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart5"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I complete the work or things from start to finish</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart6"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I have the power to change my way or my mind, if things don't work out as I
+                      expected</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart7"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I can easily overcome difficult events and painful situations</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart8"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I am open to working with others from different cultures, ethnicities and
+                      religions</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart9"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I can change my position to face different
+                      situations</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chart10"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">My opinion is very important to me</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chartY1"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">Over the past three months, I have devoted part of my time to volunteering
+                      with
+                      local institutions</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chartY2"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">During the past three months, I participated in community volunteer
+                      activities
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chartY3"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">During the past three months, I have been involved in community discussions
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chartY4"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I am ready to agree and reconcile with others</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card card-chart">
+                  <div class="card-header card-header-warning">
+                    <div class="ct-chart" id="chartY5"></div>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-title">I can build good relationships with others easily</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <footer class="footer">
+            <div class="container-fluid">
+              <div class="copyright float-center">
+                &copy; 2019, Steady Pace
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+      <!--   Core JS Files   -->
+      <script src="../../assets/js/core/jquery.min.js"></script>
+      <script src="../../assets/js/core/popper.min.js"></script>
+      <script src="../../assets/js/core/bootstrap-material-design.min.js"></script>
+      <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+      <script src="../../assets/js/custom.js"></script>
+      <script src="../../assets/js/chart.js"></script>
+      <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+      <script src="../../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+      <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+      <script src="../../assets/js/plugins/bootstrap-selectpicker.js"></script>
+      <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+      <script src="../../assets/js/plugins/nouislider.min.js"></script>
+      <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+      <!-- Library for adding dinamically elements -->
+      <script src="../../assets/js/plugins/arrive.min.js"></script>
+      <!-- Chartist JS -->
+      <script src="../../assets/js/plugins/chartist.min.js"></script>
+      <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+      <script src="../../assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+
+      <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+
+      <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script> -->
+
+      <script>
+        $(document).ready(function () {
+          $().ready(function () {
+            $sidebar = $('.sidebar');
+
+            $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+            $full_page = $('.full-page');
+
+            $sidebar_responsive = $('body > .navbar-collapse');
+
+            window_width = $(window).width();
+
+            fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+            if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+              if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+                $('.fixed-plugin .dropdown').addClass('open');
+              }
+
+            }
+
+            $('.fixed-plugin a').click(function (event) {
+              // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+              if ($(this).hasClass('switch-trigger')) {
+                if (event.stopPropagation) {
+                  event.stopPropagation();
+                } else if (window.event) {
+                  window.event.cancelBubble = true;
+                }
+              }
+            });
+
+            $('.fixed-plugin .active-color span').click(function () {
+              $full_page_background = $('.full-page-background');
+
+              $(this).siblings().removeClass('active');
+              $(this).addClass('active');
+
+              var new_color = $(this).data('color');
+
+              if ($sidebar.length != 0) {
+                $sidebar.attr('data-color', new_color);
+              }
+
+              if ($full_page.length != 0) {
+                $full_page.attr('filter-color', new_color);
+              }
+
+              if ($sidebar_responsive.length != 0) {
+                $sidebar_responsive.attr('data-color', new_color);
+              }
+            });
+
+            $('.fixed-plugin .background-color .badge').click(function () {
+              $(this).siblings().removeClass('active');
+              $(this).addClass('active');
+
+              var new_color = $(this).data('background-color');
+
+              if ($sidebar.length != 0) {
+                $sidebar.attr('data-background-color', new_color);
+              }
+            });
+
+            $('.fixed-plugin .img-holder').click(function () {
+              $full_page_background = $('.full-page-background');
+
+              $(this).parent('li').siblings().removeClass('active');
+              $(this).parent('li').addClass('active');
+
+
+              var new_image = $(this).find("img").attr('src');
+
+              if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                $sidebar_img_container.fadeOut('fast', function () {
+                  $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                  $sidebar_img_container.fadeIn('fast');
+                });
+              }
+
+              if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                $full_page_background.fadeOut('fast', function () {
+                  $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                  $full_page_background.fadeIn('fast');
+                });
+              }
+
+              if ($('.switch-sidebar-image input:checked').length == 0) {
+                var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              }
+
+              if ($sidebar_responsive.length != 0) {
+                $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+              }
+            });
+
+            $('.switch-sidebar-image input').change(function () {
+              $full_page_background = $('.full-page-background');
+
+              $input = $(this);
+
+              if ($input.is(':checked')) {
+                if ($sidebar_img_container.length != 0) {
+                  $sidebar_img_container.fadeIn('fast');
+                  $sidebar.attr('data-image', '#');
+                }
+
+                if ($full_page_background.length != 0) {
+                  $full_page_background.fadeIn('fast');
+                  $full_page.attr('data-image', '#');
+                }
+
+                background_image = true;
+              } else {
+                if ($sidebar_img_container.length != 0) {
+                  $sidebar.removeAttr('data-image');
+                  $sidebar_img_container.fadeOut('fast');
+                }
+
+                if ($full_page_background.length != 0) {
+                  $full_page.removeAttr('data-image', '#');
+                  $full_page_background.fadeOut('fast');
+                }
+
+                background_image = false;
+              }
+            });
+
+            $('.switch-sidebar-mini input').change(function () {
+              $body = $('body');
+
+              $input = $(this);
+
+              if (md.misc.sidebar_mini_active == true) {
+                $('body').removeClass('sidebar-mini');
+                md.misc.sidebar_mini_active = false;
+
+                $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+              } else {
+
+                $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+                setTimeout(function () {
+                  $('body').addClass('sidebar-mini');
+
+                  md.misc.sidebar_mini_active = true;
+                }, 300);
+              }
+
+              // we simulate the window Resize so the charts will get updated in realtime.
+              var simulateWindowResize = setInterval(function () {
+                window.dispatchEvent(new Event('resize'));
+              }, 180);
+
+              // we stop the simulation of Window Resize after the animations are completed
+              setTimeout(function () {
+                clearInterval(simulateWindowResize);
+              }, 1000);
+
+            });
+          });
+        });
+      </script>
+</body>
+
+</html>

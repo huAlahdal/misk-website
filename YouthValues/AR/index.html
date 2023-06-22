@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="utf-8" />
+  <link href="../../assets/font/Myriad Pro/MyriadPro-Semibold.otf" rel="stylesheet" type="text/css">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/apple-icon.png">
+  <link rel="icon" href="../../assets/img/favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    مؤشر القيم والشخصية للشباب
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link href="../../assets/css/material-dashboard.css?v=2.1.1" rel="stylesheet" />
+  <link href="../../assets/css/style-AR.css?v=2" rel="stylesheet" />
+  <link href="../../assets/css/style.css?v=8" rel="stylesheet" />
+  <style>
+    .sidenavButton {
+      font-size: 80% !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="loading">
+    <div class="lds-hourglass"></div>
+  </div>
+  <div class="wrapper">
+    <div class="sidebar" style="z-index: 2222" data-color="purple" data-background-color="white"
+      data-image="../../assets/img/sidebar-1.jpg">
+
+      <div class="logo">
+
+        <a class="simple-text logo-normal">
+          <img src="../../assets/img/logo.png" alt="Misk" style="width: 30%;">
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="text-center text-dark" style="color: rgb(49, 49, 49) !important; font-weight: 700 !important;">
+            <p id="filter_title">Filters</p>
+          </li>
+          <li class="nav-item active  ">
+            <select id="genderSelect" class="selects nav-link selectpicker">
+              <option value="0">الجنس</option>
+              <option value="1">ذكر</option>
+              <option value="2">انثى</option>
+            </select>
+          </li>
+          <li class="nav-item active">
+            <select id="citySelect" class="nav-link selectpicker selects">
+              <option value="0" selected>المحافظة</option>
+              <option value="1">الرياض</option>
+              <option value="2">القصيم</option>
+              <option value="3" style="display: none;">الحدود الشمالية </option>
+              <option value="4">تبوك</option>
+              <option value="5" style="display: none;">الجوف</option>
+              <option value="6">حائل</option>
+              <option value="7" style="display: none;">نجران</option>
+              <option value="8">عسير</option>
+              <option value="9" style="display: none;">الباحة</option>
+              <option value="10">جيزان</option>
+              <option value="11">الشرقية</option>
+              <option value="12">مكة المكرمة</option>
+              <option value="13">المدينة المنورة</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="ageSelect" class="nav-link selectpicker selects">
+              <option value="0">الفئة العمرية </option>
+              <option value="1">15-19</option>
+              <option value="2">20-24</option>
+              <option value="3">25-34</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="maritalSelect" class="nav-link selectpicker selects">
+              <option value="0">الحالة الاجتماعية </option>
+              <option value="1">غير متزوج</option>
+              <option value="2">متزوج</option>
+              <option value="3" style="display: none;">منفصل</option>
+              <option value="4" style="display: none;">مطلق</option>
+              <option value="5" style="display: none;">ارمل</option>
+            </select>
+          </li>
+          <li class="nav-item active  ">
+            <select id="eduSelect" class="nav-link selectpicker selects">
+              <option value="0">المرحلة التعليميه</option>
+              <option value="1" style="display: none;">الأبتدائي وما دون</option>
+              <option value="2">المتوسطة</option>
+              <option value="3">الثانوية </option>
+              <option value="4">دبلوم متوسط</option>
+              <option value="5">بكالوريوس</option>
+              <option value="6">دبلوم عالي</option>
+              <option value="7" style="display: none;">ماستر</option>
+              <option value="8" style="display: none;">دكتوراه</option>
+            </select>
+          </li>
+
+          <li class="nav-item active mt-3 d-none d-md-block">
+            <a class="nav-link" style="cursor: pointer;" data-toggle="modal" data-target="#ComparisonModal"
+              onclick="colseSidebar()">
+              <i class="material-icons" style="float: right;">filter_list</i>
+              <p style="text-align:right; margin-right: 55px;">مقارنة</p>
+            </a>
+          </li>
+
+          <li class="nav-item mt-3">
+            <a class="nav-link" style="cursor: pointer; background-color: #3A4249; color: white; opacity: 0.5;"
+              href="https://www.steadypace.co/Misk/YouthValues/">
+              <p style="text-align:center;">English version</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluidAR">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="navbar-wrapper">
+            <p class="navbar-brand nav-AR font-weight-bold" style="margin-right: 2rem;">مؤشر القيم والشخصية للشباب</p>
+          </div>
+
+        </div>
+      </nav>
+      <div class="content pt-4 pt-sm-0" style="padding-top: 0;">
+        <div class="container-fluid">
+          <div class="d-none row justify-content-center">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">person</i>
+                  </div>
+                  <p class="card-category p-2">عينات</p>
+                  <h3 class="card-title p-2">4000
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="card card-stats">
+                <div class="card-header card-header-info card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">question_answer</i>
+                  </div>
+                  <p class="card-category p-2">الأسئلة</p>
+                  <h3 class="card-title p-2">150</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6 mt-lg-0 mt-2">
+              <div class="card card-stats">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons">thumb_up</i>
+                  </div>
+                  <p class="card-category p-2">نطاقات</p>
+                  <h3 class="card-title p-2">5</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none row row justify-content-center">
+            <div class="d-md-block d-none col-sm-12 col-12 m-4 h-100 ">
+              <div class="card card-chart text-center">
+                <div class="card-header card-header-warning chart-color m-0">
+                  <div class="ct-chart" id="chartAllIndexes"></div>
+                </div>
+                <div class="card-body">
+                  <p class="card-title">حدد النطاق
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-none row row justify-content-center">
+            <div class="d-block d-md-none col-sm-12 col-12 m-4 h-100 ">
+              <div class="card card-chart text-center">
+                <div class="card-header card-header-warning chart-color m-0">
+                  <div class="ct-chart" id="chartAllIndexes2"></div>
+                </div>
+                <div class="card-body">
+                  <p class="card-title">حدد النطاق
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center mr-1">
+            <div class="col-12 ARAlign">
+              نظرة عميقة على مؤشر القيم والشخصية لشباب المملكة العربية السعودية ، بناء على دراسة للسلوكيات والشخصية
+              أجرتها مجموعه مسك خلال شهر ديسمبر 2019.
+            </div>
+          </div>
+
+          <div class="row mb-4">
+            <div class="d-none col-lg-4 col-sm-6 col-12 mb-4">
+              <div class="card card-stats p-3 h-100" style="z-index: -1;">
+                <div class="row h-100 align-items-center justify-content-center ">
+                  <div class="col-12 my-2">
+                    <canvas id="AllDomains"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12" style="direction: ltr;">
+              <div class="row">
+                <div class="col-12">
+                  <div class="row justify-content-center mt-4">
+                    <div id="IndexName" class="col-12 text-center">
+                      العزيمة والمثابره
+                    </div>
+                    <div id="filterStringCol" class="col-12 text-center text-dark text-small"
+                      style="font-weight: normal; font-size: 80%; display: none;">
+                      تمت التصفية بحسب (<i id="filterString"></i>)
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-12 col-12 mb-4">
+                  <div class="card card-stats p-3 h-100" style="z-index: -1;">
+                    <div class="row h-100 align-items-center justify-content-center ">
+                      <div class="col-lg-10 col-sm-4 col-8 my-2">
+                        <canvas id="overAll"></canvas>
+                        <div class="bgOverAll"></div>
+                      </div>
+
+                      <div class="col-lg-10 col-sm-4 col-6 my-2">
+                        <canvas id="gendar"></canvas>
+                        <div class="bg"></div>
+                      </div>
+                      <div class="col-lg-10 col-sm-4 col-6 my-2">
+                        <canvas id="gendar2"></canvas>
+                        <div class="bgb"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="col-lg-9 col-md-12 col-12 mb-4 pr-lg-4">
+                  <div class="card card-stats h-100 p-3">
+                    <div class="row align-items-center justify-content-center h-100 px-sm-5">
+                      <div class="col-12 h-100 px-sm-5">
+                        <script src="../../assets/map/highmaps.js"></script>
+                        <script src="../../assets/map/exporting.js"></script>
+                        <script src="../../assets/map/sa-all-ar.js"></script>
+
+                        <div id="container" class="px-sm-5" style="width:100%; height:100%; min-height: 400px;"></div>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+          <div class="row my-3 statements" dir="rtl">
+          </div>
+
+          <footer class="footer">
+            <div class="container-fluid">
+              <div class="copyright float-center" dir="ltr">
+                &copy; 2020 Misk
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="ComparisonModal" tabindex="-1" role="dialog" aria-labelledby="ComparisonModalTitle"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-headerAR">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h5 class="modal-title text-center" id="exampleModalLongTitle" style="font-weight: 500;">مقارنة النطاقات
+              بناء على عامل واحد</h5>
+
+          </div>
+          <div class="modal-body">
+            <div class="row justify-content-center">
+              <div class="col-auto">
+                <ul class="nav nav-pills nav-pills-icons nav-pills-success" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" role="tab" href="#" data-toggle="tab" onclick="comparisonSelect(0)">
+                      <i class="material-icons">dashboard</i>
+                      الجنس
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" role="tab" href="#" data-toggle="tab" onclick="comparisonSelect(1)">
+                      <i class="material-icons">supervisor_account</i>
+                      الفئة العمرية
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" role="tab" href="#" data-toggle="tab" onclick="comparisonSelect(2)">
+                      <i class="material-icons">map</i>
+                      الحالة الاجتماعية
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" role="tab" href="#" data-toggle="tab" onclick="comparisonSelect(3)">
+                      <i class="material-icons">book</i>
+                      المرحلة التعليميه
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" role="tab" href="#" data-toggle="tab" onclick="comparisonSelect(4)">
+                      <i class="material-icons">people</i>
+                      الحالة الإجتماعية
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-10 text-center">
+                <div id="container2" style="width: 100%;">
+                  <canvas id="canvas"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <span id="Domains">نطاقات</span>
+      <a class="sidenavButton active" id="b1">العزيمة والمثابره <span id="DeterminationValue"></span></a>
+      <a class="sidenavButton" id="b2">الوطنية والإنتماء الوطني <span id="PatriotismnValue"></span></a>
+      <a class="sidenavButton" id="b3">الإيجابية <span id="PositivityValue"></span></a>
+      <a class="sidenavButton" id="b4">المسؤولية <span id="ResponsibilityValue"></span></a>
+      <a class="sidenavButton" id="b5">التسامح <span id="ToleranceValue"></span></a>
+    </div>
+  </div>
+
+  <script>
+    var IsArabic = true;
+    document.getElementById('filter_title').innerHTML = 'تصفية النتائج';
+  </script>
+  <script src="../../assets/js/core/jquery.min.js"></script>
+  <script src="../../assets/js/core/popper.min.js"></script>
+  <script src="../../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="../../assets/js/chart.js"></script>
+  <script src="../../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <script src="../../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <script src="../../assets/js/plugins/nouislider.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <script src="../../assets/js/plugins/arrive.min.js"></script>
+  <script src="../../assets/js/plugins/chartist.min.js"></script>
+  <script src="../../assets/js/material-dashboard2.js?v=9" type="text/javascript"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
+</body>
+
+</html>
